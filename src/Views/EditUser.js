@@ -15,7 +15,7 @@ function EditUser() {
 
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
+        axios.get(`http://localhost:3003/users/${id}`).then((res) => {
             setName(res.data.name);
             setEmail(res.data.email);
             setPhone(res.data.phone );
@@ -32,7 +32,7 @@ function EditUser() {
     function Update(e) {
         e.preventDefault();
         console.log(data);
-        axios.put(`https://jsonplaceholder.typicode.com/users/${id}`, data).then(
+        axios.put(`http://localhost:3003/users/${id}`, data).then(
             navigate("/users")
         )
     }

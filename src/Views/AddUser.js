@@ -19,7 +19,7 @@ function AddUser() {
     function Submit(e) {
         e.preventDefault();
         console.log(data);
-        axios.post("https://jsonplaceholder.typicode.com/users", data).then(
+        axios.post("http://localhost:3003/users", data).then(
             navigate("/users")
         )
     }

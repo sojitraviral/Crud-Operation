@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.13",
     "axios": "^1.2.0",
+    "json-server": "^0.17.1",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
     "react": "^18.2.0",
@@ -28,7 +29,8 @@
     "start": "yarn build:css && react-scripts start",
     "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch db.json --port 3003"
   },
   "eslintConfig": {
     "extends": [

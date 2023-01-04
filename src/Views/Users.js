@@ -7,17 +7,17 @@ function Users() {
     const [users, setUsers] = useState([]);
 
     const loadUsers = () => {
-        axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-            setUsers(res.data);
+        axios.get("http://localhost:3003/users").then((res) => {
+            setUsers(res.data.reverse());
         })
     }
 
     useEffect(() => {
-        loadUsers();
+        loadUsers()
     }, [])
 
     function Delete(id) {
-        axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`).then(
+        axios.delete(`http://localhost:3003/users/${id}`).then(
             loadUsers()
         )
     }

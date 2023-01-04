@@ -9,7 +9,7 @@ function Viewusers() {
 
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
+        axios.get(`http://localhost:3003/users/${id}`).then((res) => {
             setUsers(res.data);
         })
     }, [])
@@ -22,9 +22,9 @@ function Viewusers() {
             {user && (
                 <div className='w-4\/5 flex px-6 py-4 border border-black mt-16'>
                     <div className='w-4\/5 flex flex-col space-y-4'>
-                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Name</h2>
-                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Email</h2>
-                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Phone</h2>
+                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Name : </h2>
+                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Email : </h2>
+                        <h2 className='text-black font-semibold font-Inter text-2xl border-b border-black'>Phone : </h2>
                     </div>
 
                     <div className='w-4\/5 flex flex-col space-y-4'>
